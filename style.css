@@ -25,6 +25,10 @@ header .top-header {
   justify-content: space-between;
 }
 
+header .top-header .flex {
+  flex-wrap: wrap;
+}
+
 .top-header .left a,
 .top-header .right a {
   color: white;
@@ -216,6 +220,7 @@ h2 {
 .slideshow-container img {
   height: 450px;
   object-fit: cover;
+  border-radius: 0;
 }
 
 
@@ -557,9 +562,6 @@ img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .div1 .marketer .name {
@@ -783,7 +785,12 @@ img {
   padding-right: 120px;
 }
 
-
+.footer .onediv img {
+  width: auto;
+  max-width: 100%;
+  height: 57px;
+  margin-bottom: 20px;
+}
 
 .footer p {
   color: white;
@@ -870,6 +877,10 @@ img {
     padding-top: 20px;
   }
 
+  #Content button {
+    border: none;
+  }
+
 }
 
 
@@ -933,6 +944,11 @@ img {
     padding-left: 0;
     padding-top: 20px;
   }
+
+  .nextslide .right {
+    width: 100%;
+  }
+
 }
 
 @media (max-width:991px) {
@@ -1225,6 +1241,10 @@ img {
 }
 
 @media (max-width:767px) {
+  header .left img {
+    height: 52px;
+  }
+
   .bottom-header .container .flex .right ul {
 
     display: block;
@@ -1502,6 +1522,31 @@ img {
 }
 
 @media (max-width:575px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .top-header .left a,
+  .top-header .right a {
+    font-size: 14px;
+  }
+
+  .top-header .left a:last-child {
+    margin-right: 0;
+  }
+
+  header .top-header .flex {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  header .top-header .flex .left {
+    margin-bottom: 12px;
+  }
+
+  header .bottom-header .flex {
+    padding-left: 0;
+  }
 
   .bottom-header .container .flex .right ul {
 
@@ -1567,24 +1612,39 @@ img {
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 32px;
     margin-bottom: 15px;
+  }
+
+  .slideshow-container img {
+    height: 340px;
   }
 
   .slideshow-container button {
 
     font-size: 17px;
     height: 48px;
-    width: 225px;
+    width: 178px;
     margin-top: 20px;
+  }
+
+  .prev,
+  .next {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
   .nextslide {
     margin-top: 50px;
   }
 
+  .slideshow-container .text {
+    padding: 0 15px;
+  }
+
   .slideshow-container p {
     font-weight: bold;
+    font-size: 14px;
   }
 
   .nextslide #Content h3 {
@@ -1608,11 +1668,13 @@ img {
 
   #Content {
     max-width: 100%;
-    margin-right: 30px;
+    margin: 0;
   }
 
   .Anything {
     margin: 0 -10px;
+    padding: 0;
+    align-items: baseline;
   }
 
   .Anything .card {
@@ -1631,14 +1693,14 @@ img {
 
   .parent1 .left {
     width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin-top: 20px;
   }
 
   .parent1 {
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .image {
@@ -1658,7 +1720,7 @@ img {
 
   .parent1 .right p {
     font-size: 16px;
-    padding-left: 20px;
+    padding-left: 0px;
   }
 
   .parent1 .right h1 {
@@ -1666,7 +1728,7 @@ img {
   }
 
   .parent1 .right p {
-    font-size: 16px;
+    font-size: 14px;
     padding-bottom: 24px;
   }
 
@@ -1683,6 +1745,22 @@ img {
     padding-left: 0;
   }
 
+  .parent1 .together {
+
+    width: calc(100% - 45px);
+    text-align: left;
+  }
+
+  .parent1 .right .feature-list {
+    padding-left: 0px;
+  }
+
+  img {
+    width: auto;
+    height: 60px;
+
+  }
+
   #parent4 {
     padding-left: 20px;
   }
@@ -1697,7 +1775,7 @@ img {
   }
 
   .parent1 .right .new {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .parent1 .right .feature-list .new {
@@ -1736,9 +1814,10 @@ img {
     font-size: 14px;
   }
 
+
   .reaction h1 {
-    font-size: 33px;
-    padding: 30px;
+    font-size: 24px;
+    padding: 0;
   }
 
   .reaction .paragraph1 {
@@ -1746,13 +1825,13 @@ img {
   }
 
   .reaction {
-    padding-bottom: 54px;
+    padding: 28px 15px;
     margin-top: 10px;
   }
 
   .footer {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     flex-wrap: wrap;
   }
 
@@ -1788,10 +1867,30 @@ img {
 
   .Whatever .flex {
     flex-wrap: wrap;
+    padding-left: 0;
   }
 
   .Whatever .project {
     width: 100%;
+    margin: 0;
     margin-bottom: 65px;
+  }
+}
+
+@media (max-width:460px) {
+  .Anything {
+    flex-wrap: wrap;
+  }
+
+  .parent1 .left img {
+    height: 249px;
+  }
+
+  .Anything .card {
+    width: 100%;
+  }
+
+  .Anything .card p {
+    font-size: 14px;
   }
 }
